@@ -1,10 +1,14 @@
 import * as Tabs from "@radix-ui/react-tabs";
 import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
-import { useState } from "react";
+import { Dispatch, useState } from "react";
 import hero1 from "../assets/hero1.jpg";
 import hero2 from "../assets/hero2.jpg";
 import hero3 from "../assets/hero3.jpg";
 
+type CarouselProps = {
+  activetheme: string;
+  setActivetheme: Dispatch<string>;
+};
 const slides = [
   {
     id: "slide1",
@@ -29,15 +33,19 @@ const slides = [
   },
 ];
 
-export const Carousel = () => {
+export const Carousel = ({ activetheme, setActivetheme }: CarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+    setActivetheme(slides[currentIndex].image);
+    console.log(activetheme);
   };
 
   const handleNext = () => {
     setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    setActivetheme(slides[currentIndex].image);
+    console.log(activetheme);
   };
 
   return (

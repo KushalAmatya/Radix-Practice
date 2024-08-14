@@ -45,10 +45,11 @@ const servicesData = [
 
 export const Services = () => {
   return (
-    <section className="py-16 min-h-[700px]" id="services">
-      <h2 className="text-center text-3xl font-bold mb-12 text-white">
-        Our Services
-      </h2>
+    <section
+      className="py-16 min-h-[700px] border-t border-gray-100"
+      id="services"
+    >
+      <h2 className="text-center text-3xl font-bold mb-12 ">Our Services</h2>
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
         {servicesData.map((service) => (
           <div
