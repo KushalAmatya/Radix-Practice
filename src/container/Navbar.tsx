@@ -5,9 +5,13 @@ export const Navbar = () => {
     <div>
       <nav className="flex justify-between text-xl items-center px-6 py-4 bg-gradient-to-r from-gray-800/50 to-stone-800/50 text-white w-full top-0 fixed z-50">
         <div className="flex space-x-6 px-8">
-          <a href="#" className="hover:text-gray-400">
+          <Link
+            to="hero"
+            smooth={true}
+            className="hover:text-gray-400 cursor-pointer"
+          >
             Home
-          </a>
+          </Link>
           <Link to="about" smooth={true} offset={-75}>
             <a href="" className="hover:text-gray-400">
               About
@@ -16,14 +20,18 @@ export const Navbar = () => {
           <Link
             to="contact"
             smooth={true}
-            offset={-75}
-            className="hover:text-gray-400"
+            offset={-110}
+            className="hover:text-gray-400 cursor-pointer"
           >
             Contact
           </Link>
-          <a href="#" className="hover:text-gray-400">
+          <Link
+            to="services"
+            smooth={true}
+            className="hover:text-gray-400 cursor-pointer"
+          >
             Services
-          </a>
+          </Link>
         </div>
         <div className="flex space-x-4 px-8">
           <Button value="Login" isSuccess={true} />

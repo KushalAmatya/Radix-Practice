@@ -1,7 +1,7 @@
 import * as Form from "@radix-ui/react-form";
 export const Contact = () => {
   return (
-    <div className="min-h-[650px]" id="contact">
+    <div className="min-h-[600px]" id="contact">
       <h1 className="text-center text-white text-4xl mb-8 font-bold">
         Contact Us
       </h1>
@@ -18,7 +18,7 @@ export const Contact = () => {
               Please enter your email
             </Form.Message>
             <Form.Message
-              className="text-[13px] text-white opacity-[0.8]"
+              className="text-[13px] text-red-500 opacity-[0.8]"
               match="typeMismatch"
             >
               Please provide a valid email

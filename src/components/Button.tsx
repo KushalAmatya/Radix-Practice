@@ -1,5 +1,5 @@
 type ButtonProps = {
-  isSuccess: boolean;
+  isSuccess: boolean | undefined;
   value: string;
 };
 
